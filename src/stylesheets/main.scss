@@ -1,3 +1,407 @@
+$primary: #963636;
+
+
+
 /* Your styles go here */
 @import "bootstrap/scss/bootstrap.scss";
 @import "bootstrap-icons/font/bootstrap-icons.css";
+
+
+
+//Mixins
+@mixin text-shadow {
+    text-shadow: 3px 3px 3px black;
+}
+
+
+
+//all
+*{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+//header
+.Logo {
+    width: 150px;
+    height: auto;
+}
+
+//Jumbotron section
+
+.jumbotron{
+    display: flex;
+    gap: 50px;
+    height: 500px;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+    justify-content: center;
+    background-image: url(../images/jumbotron-background2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+.jumbotron-right{
+    float: right;
+    background-color: white;
+    height: 180px;
+    width: 500px;
+    border-radius: 10px;
+
+    div{
+        margin: 2rem;
+    }
+    
+    
+}
+
+.jumbotron-left{
+    text-align: center;
+    margin-top: 2rem;
+}
+
+h1{
+    @include text-shadow();
+}
+
+#hero-text{
+    @include text-shadow();
+}
+
+
+//How it works section
+.howItWorks{
+
+    margin-top: 3rem;
+
+
+    div.list-items{
+        text-align: center;
+
+        ul{
+            
+            list-style: none;
+            display: inline-block;
+            
+    
+        
+            .steps{
+                width: 70px;
+                height: 70px;
+                text-align: center;
+                background-color: #963636;
+                color: white;
+                border-radius: 50%;
+                padding-top: 1.25rem;
+
+            }
+        
+            .steps-description{
+                padding-top: 1.25rem;
+                padding-left: 20px;
+            }
+    
+        }
+    }
+    
+}
+
+//Advantages section
+
+.advantages{
+    background-color: #963636;
+    color: white;
+    height: auto;
+    margin-top: 3rem;
+    padding-top: 3rem;
+    
+    padding-bottom: 3rem;
+    
+
+    ul{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 50px;
+
+        li{
+            width: 700px;
+        }
+    }
+}
+
+
+
+//testimonials section
+
+.carousel, .slide{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+}
+
+
+//Small Section
+
+.smallSection {
+    
+    height: 400px;
+    //background: rgb(150,54,54);
+    //background: linear-gradient(0deg, rgba(150,54,54,1) 0%, rgba(201,103,103,1) 50%, rgba(255,255,255,1) 100%);
+    background-image: url(../images/shortSection.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    .container{
+        float: left;
+        background-color: white;
+        width: 400px;
+        height: auto;
+        margin: 5%;
+        padding: 10px;
+        border-radius: 5px;
+    }
+}
+
+
+//FAQ
+
+.FAQ{
+    height: auto;
+
+    .accordion{
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 10px;
+    }
+}
+
+//recentPurchases
+
+.recentPurchases{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 4rem;
+    width: 1000px;
+
+}
+
+//footer
+
+footer{
+    background-color: black;
+}
+
+
+
+
+
+
+
+
+@media (max-width:768px) {
+    //jumbotron
+    .jumbotron-right{
+        float: right;
+        background-color: white;
+        height: 300px;
+        width: auto;
+        border-radius: 10px;
+    
+        div{
+            margin: 2rem;
+        }
+        
+        
+    }   
+    
+    //recentPurchases
+
+.recentPurchases{
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 288px 288px;
+    margin-top: 4rem;
+    gap: 20px;
+    width: auto;
+
+}
+
+.smallSection {
+    
+    height: 400px;
+    //background: rgb(150,54,54);
+    //background: linear-gradient(0deg, rgba(150,54,54,1) 0%, rgba(201,103,103,1) 50%, rgba(255,255,255,1) 100%);
+    background-image: url(../images/shortSection.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    .container{
+        float: left;
+        background-color: white;
+        width: 400px;
+        height: auto;
+        margin-top: 6rem;
+        margin-left: 3rem;
+        padding: 10px;
+        border-radius: 5px;
+    }
+}
+
+footer{
+    background-color: black;
+    img{
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+}
+
+@media (max-width: 576px) {
+
+    //jumbotron
+    
+    .jumbotron{
+        display: flex;
+        flex-wrap:wrap;
+        gap: 50px;
+        height: 500px;
+        padding-top: 10rem;
+        padding-bottom: 10rem;
+        justify-content: center;
+        background-image: url(../images/jumbotron-background2.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    
+    
+    }
+    
+    .jumbotron-right{
+        margin-left: 2.5rem;
+        text-align: center;
+        background-color: white;
+        height: 180px;
+        width: 500px;
+        border-radius: 10px;
+    
+        div{
+            margin: 2rem;
+        }
+        
+        
+    }
+    
+    .jumbotron-left{
+        text-align: center;
+        margin-top: 0;
+        margin-left: 3rem;
+    }
+    
+        //recentPurchases
+    
+    .recentPurchases{
+        justify-content: center;
+        display: grid;
+        grid-template-columns: 288px;
+        margin-top: 4rem;
+        width: auto;
+    
+    }
+    
+    //Small Section
+    
+    .smallSection {
+        
+        height: 400px;
+        //background: rgb(150,54,54);
+        //background: linear-gradient(0deg, rgba(150,54,54,1) 0%, rgba(201,103,103,1) 50%, rgba(255,255,255,1) 100%);
+        background-image: url(../images/shortSection.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    
+        .container{
+            float: left;
+            justify-content: center;
+            background-color: white;
+            width: 400px;
+            height: auto;
+           // margin-top: 5rem;
+            //margin-left: 7rem;
+           //padding: 10px;
+            border-radius: 5px;
+        }
+    }
+    
+    .advantages{
+        background-color: #963636;
+        color: white;
+        height: auto;
+        margin-top: 3rem;
+        padding: 3rem;
+        
+    
+        ul{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 50px;
+    
+            li{
+                width: 700px;
+            }
+        }
+    }
+    
+    
+    .howItWorks{
+    
+        margin-top: 1rem;
+        padding: 3rem;
+    
+    
+        div.list-items{
+            text-align: center;
+    
+            ul{
+                
+                list-style: none;
+                display: inline-block;
+                
+        
+            
+                .steps{
+                    width: 70px;
+                    height: 70px;
+                    text-align: center;
+                    background-color: #963636;
+                    color: white;
+                    border-radius: 50%;
+                    padding-top: 1.25rem;
+    
+                }
+            
+                .steps-description{
+                    padding-top: 1.25rem;
+                    padding-left: 20px;
+                }
+        
+            }
+        }
+        
+    }
+    
+    footer{
+        background-color: black;
+        img{
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+    }
